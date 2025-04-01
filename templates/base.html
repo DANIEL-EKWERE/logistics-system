@@ -1,0 +1,238 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> 
+    {% block title %}
+    Sqil Logistcs 
+    {% endblock %}
+    | shipment Logistic Services </title>
+    <meta name="keywords" content="Sqil Logistic Services"/>
+	<meta name="description" content="Sqil Logistic Services">
+	<meta name="robots" content="index,follow">
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/png">
+    <link href="{% static 'css/themify-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'css/flaticon.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet">
+    <link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'css/owl.theme.css' %}" rel="stylesheet">
+    <link href="{% static 'css/slick.css' %}" rel="stylesheet">
+    <link href="{% static 'css/slick-theme.css' %}" rel="stylesheet">
+    <link href="{% static 'css/swiper.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/owl.transitions.css' %}" rel="stylesheet">
+    <link href="{% static 'css/odometer-theme-default.css' %}" rel="stylesheet">
+    <link href="{% static 'css/jquery.fancybox.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+  
+</head>
+
+<body>
+
+    <!-- start page-wrapper -->
+    <div class="page-wrapper">
+
+        <!-- start preloader -->
+        <div class="preloader">
+            <div class="sk-folding-cube">
+                <div class="sk-cube1 sk-cube"></div>
+                <div class="sk-cube2 sk-cube"></div>
+                <div class="sk-cube4 sk-cube"></div>
+                <div class="sk-cube3 sk-cube"></div>
+            </div>
+        </div>
+        <!-- end preloader -->
+
+        <!-- Start header -->
+        <header id="header" class="site-header header-style-3">
+            <div class="topbar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-sm-3">
+                            <div class="social">
+                                <ul>
+                                    <li><a href="https://www.facebook.com" target="_blank"><i class="ti-facebook"></i></a></li>
+                                    <li><a href="https://twitter.com" target="_blank"><i class="ti-twitter-alt"></i></a></li>
+                                    <li><a href="https://www.instagram.com" target="_blank"><i class="ti-instagram"></i></a></li>
+                                    <li><a href="https://www.linkedin.com" target="_blank"><i class="ti-linkedin"></i></a></li>
+                                    <li><a href="https://www.youtube.com" target="_blank"><i class="ti-pinterest"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-sm-9">
+                            <div class="text">
+                                <p>Do you want any logistics service, then call us: <span>09048239391</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end container -->
+            </div> <!-- end topbar -->
+
+            <nav class="navigation navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="open-btn">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html"><img src="{% static 'images/logo.png' %}" alt></a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse navbar-right navigation-holder">
+                        <button class="close-navbar"><i class="ti-close"></i></button>
+                        <ul class="nav navbar-nav">
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="{% url 'about' %}">About Us</a></li>
+                            <li class="menu-item-has-children"><a href="#">Services</a>
+                                <ul class="sub-menu">
+                                    <li><a href="{% url 'warehouse' %}">Warehouse </a></li>
+                                    
+                                    <li><a href="{% url 'distribution-transportation' %}">Distribution / Transportation</a></li>
+                                    <li><a href="{% url 'e-commerce-logistics' %}">E-Commerce Logistics</a></li>
+                                     <li><a href="{% url 'global-freight-forwarding' %}">Global Freight Forwarding</a></li>
+                                     <li><a href="{% url 'export-import' %}">Export / Import</a></li>
+                                     {% comment %} <li><a href="{% url 'courier-service' %}">Courier Services</a></li> {% endcomment %}
+                    
+                                </ul>
+                            </li>
+                           
+                            <li class="menu-item-has-children"><a href="{% url 'contact' %}">Contact Us</a>
+                             <ul class="sub-menu">
+                                    <li><a href="{% url 'career' %}">Career </a></li>
+                                   
+                                    
+                                </ul>
+                            </li>
+                            
+                            <li><a href="{% url 'tracking' %}">Tracking</a></li>
+                             <li><a href="google.com">App Download</a></li>
+                        </ul>
+                    </div><!-- end of nav-collapse -->
+                <div class="search-contact">
+                         
+                        <div class="contact">
+                            <a href="{% url 'booking' %}" class="theme-btn">Online Booking</a>
+                        </div>
+                    </div>
+                     
+                </div><!-- end of container -->
+            </nav>
+        </header>        <!-- end of header -->
+{% block content %}
+
+{% endblock %}
+
+ <!-- start site-footer -->
+ <footer class="site-footer">
+    <div class="upper-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col col-lg-3 col-md-3 col-sm-6">
+                    <div class="widget about-widget">
+                        <div class="logo widget-title">
+                            <img src="{% static 'images/logo.png' %}" alt>
+                        </div>
+                        <p>Crowntech-Adeyemi is a well-reputed logistics company in Lagos, Abuja that has marked its presence with its outstanding logistic services. We provide complete logistics solutions in all famous cities all over Nigeria. </p>
+                    </div>
+                </div>
+                <div class="col col-lg-3 col-md-3 col-sm-6">
+                    <div class="widget link-widget">
+                        <div class="widget-title">
+                            <h3>Usefull Links</h3>
+                        </div>
+                        <ul>
+                            <li><a href="{% url 'home' %}">Home </a></li>
+                            <li><a href="{% url 'about' %}">About Us</a></li>
+                            <li><a href="{% url 'contact' %}">Contact us</a></li>
+                            <!--<li><a href="partner.php">Partner</a></li>-->
+                            {% comment %} <li><a href="gallery.html">Gallery</a></li> {% endcomment %}
+                            {% comment %} <li><a href="certification.html">Certification</a></li> {% endcomment %}
+                            {% comment %} <li><a href="privacy.html">Privacy Policy</a></li> {% endcomment %}
+                            {% comment %} <li><a href="terms-condition.html">Terms & Condition</a></li> {% endcomment %}
+                            {% comment %} <li><a href="shipping.html">Cancellation, Shipping & Return Policy</a></li> {% endcomment %}
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="col col-lg-3 col-md-3 col-sm-6">
+                    <div class="widget link-widget">
+                        <div class="widget-title">
+                            <h3>Services</h3>
+                        </div>
+                        <ul>
+                          <li><a href="{% url 'warehouse' %}">Warehouse </a></li>
+                            {% comment %} <li><a href="contract-logistic.html">Contract Logistics</a></li> {% endcomment %}
+                            {% comment %} <li><a href="on-demand-logistics.html">On Demand Logistic</a></li> {% endcomment %}
+                            <li><a href="{% url 'distribution-transportation' %}">Distribution / Transportation</a></li>
+                            {% comment %} <li><a href="order-management.html">Order Management</a></li> {% endcomment %}
+                            {% comment %} <li><a href="{% url 'ecommerce-warehouse' %}">E Commerce Warehouse</a></li> {% endcomment %}
+                             
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="col col-lg-3 col-md-3 col-sm-6">
+                    <div class="widget contact-widget service-link-widget">
+                        <div class="widget-title">
+                            <h3>Our Address</h3>
+                        </div>
+                        <ul>
+                            <li>HB4, Grand Office, No 40 Lagos road, Obanikoro, Ilupeju, Ikorodu, Lekki, Victoria Island, Ikeja Lagos Nigeria</li>
+                            <li><span>Phone:</span> 2349048239391</li>
+                            <li><span>Email:</span> info@sqil_logistics.com</li>
+                            
+                        </ul>
+                         <div class="widget-title" style="margin-top:20px;margin-bottom:10px;">
+                            <h3>Download App</h3>
+                        </div>
+                        <ul style="margin-top:18px;">
+                        <li><a href="google.com" target="_blank"><img src="{% static 'images/android.png' %}" class="img-responsive" alt="" style="width:150px;"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end container -->
+    </div>
+    <div class="lower-footer">
+        <div class="container">
+            <div class="row">
+                <div class="separator"></div>
+                <div class="col col-xs-12">
+                    <p class="copyright">Copyright &copy; 2025 Crowntech-Adeyemi. All rights reserved.</p>
+                     <div class="extra-link">
+                        Website Developed by - <a href="index.html">Crowntech-Adeyemi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="whatsapp-app">
+            <a target="_blank" id="whatsapp-app" href="https://wa.me/09048239391" data-modal="modal-22">
+                <img src="{% static 'images/whatsapp-inquiry.png' %}" alt="whatsapp-app" width="100%"></a>
+        </div>        <!-- end site-footer -->
+</div>
+<!-- end of page-wrapper -->
+
+
+
+<!-- All JavaScript files
+================================================== -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+<!-- Plugins for this template -->
+<script src="{% static 'js/jquery-plugin-collection.js' %}"></script>
+
+<!-- Custom script for this template -->
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
