@@ -75,11 +75,21 @@ WSGI_APPLICATION = 'sqillogistics.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+}
+'''
+
+
+import dj_database_url
+
+
+DATABASES = {
+    'default': dj_database_url.parse('postgresql://logistics_db_vggo_user:9qMODwCjYeRu8Xsq2VFWFFNhOhKCDeTt@dpg-cvluptbipnbc73bf6u80-a.oregon-postgres.render.com/logistics_db_vggo')
 }
 
 
